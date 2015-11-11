@@ -1,0 +1,25 @@
+RewriteEngine on
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule .* $0.php
+
+
+# Redirect errors to custom error pages
+#
+# A part of Active Error Pages, from corz.org
+#
+
+# Custom Error Pages..
+# comment-out anything you don't want/need.
+
+ErrorDocument 400 /err/active-error-pages.php
+ErrorDocument 401 /err/active-error-pages.php
+ErrorDocument 403 /err/active-error-pages.php
+ErrorDocument 404 /err/active-error-pages.php
+ErrorDocument 410 /err/active-error-pages.php
+ErrorDocument 500 /err/active-error-pages.php
+ErrorDocument 503 /err/active-error-pages.php
+
+# put this into your site's main /.htaccess
+
